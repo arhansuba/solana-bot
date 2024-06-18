@@ -1,0 +1,118 @@
+// Reset default margins and paddings for all elements
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  // Apply box-sizing border-box model to all elements
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  // Global styles for the entire application
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .App {
+    text-align: center;
+    height: 100%;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 80px); /* Adjust height based on header size */
+  }
+  
+  /* Styles for Chat components */
+  .chat-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .chat-sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+  }
+  
+  .chat-main {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content exceeds container height */
+  }
+  
+  .chat-input {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .chat-input button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .message p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Add more styles as needed for other components */
+  
+  // Responsive design adjustments (optional)
+  @media (max-width: 768px) {
+    .chat-container {
+      flex-direction: column;
+    }
+    
+    .chat-sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+    }
+    
+    .chat-main {
+      padding: 10px;
+    }
+  }
+  
+  
