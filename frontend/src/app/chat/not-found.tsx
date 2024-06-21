@@ -1,4 +1,5 @@
 import { Flex, Heading, Separator } from '@radix-ui/themes'
+import React from 'react'
 
 const NotFound = () => {
   return (

@@ -1,11 +1,16 @@
 from flask import Flask
-from flask_cors import CORS
+from flask_sqlalchemy import SQLAlchemy
 
-def create_app():
-    app = Flask(__name__)
-    CORS(app)
+app = Flask(__name__)
+app.config.from_object('config')
 
-    from .routes import main
-    app.register_blueprint(main)
+db = SQLAlchemy(app)
 
-    return app
+# Import and register blueprints
+from app.routes import auth, projects, tools
+app.register_blueprint(auth.bp)
+app.register_blueprint(projects.bp)
+app.register_blueprint(tools.bp)
+
+if __name__ == '__main__':
+    app.run()
